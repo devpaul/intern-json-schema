@@ -9,7 +9,7 @@ This Json Schema for [Intern 4](https://theintern.io) testing framework defines 
 Install the schema to your project
 
 ```bash
-	npm install https://github.com/devpaul/intern-json-schema.git --save-dev
+	npm install intern-json-schema.git --save-dev
 ```
 
 ## WebStorm & Intellij

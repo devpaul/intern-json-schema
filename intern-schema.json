@@ -138,10 +138,7 @@
 		"configs": {
 			"type": "object",
 			"additionalProperties": {
-				"$ref": "#/definitions/config",
-				"extends": {
-					"type": "string"
-				}
+				"$ref": "#/definitions/extensibleConfig"
 			}
 		},
 
@@ -166,8 +163,18 @@
 			}
 		},
 
+		"extensibleConfig": {
+			"$ref": "#/definitions/functionalConfig",
+			"description": "Extensible Configuration",
+			"properties": {
+				"extends": {
+					"type": "string"
+				}
+			}
+		},
+
 		"functionalConfig": {
-			"type": "object",
+			"$ref": "#/definitions/config",
 			"description": "Configuration for functional tests",
 			"properties": {
 				"capabilities": {
@@ -265,16 +272,16 @@
 			]
 		}
 	},
-	"$ref": "#/definitions/config",
+	"$ref": "#/definitions/functionalConfig",
 	"properties": {
 		"browser": {
-			"$ref": "#/definitions/configs"
+			"$ref": "#/definitions/functionalConfig"
 		},
 		"configs": {
 			"$ref": "#/definitions/configs"
 		},
 		"node": {
-			"$ref": "#/definitions/configs"
+			"$ref": "#/definitions/config"
 		}
 	}
 }

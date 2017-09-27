@@ -1,6 +1,6 @@
 {
   "name": "intern-json-schema",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "This Json Schema for Intern 4 defines the structure of your intern.json file.",
   "directories": {
     "doc": "docs"
